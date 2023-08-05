@@ -1,4 +1,4 @@
-export interface CompatibilityItem {
+export interface ContactItem {
   icon: string;
   title: string;
   url: string;
@@ -23,6 +23,11 @@ export interface NavItem {
 
 export interface ShowcaseSite {
   title: string;
+  image: ImageMetadata;
+  url: string;
+}
+export interface TeamMember {
+  name: string;
   image: ImageMetadata;
   url: string;
 }

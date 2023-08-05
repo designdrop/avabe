@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const services: Array<FeatureItem> = [
+  {
+    title: "Event Production",
+    description:
+      "Private and Public events. Everything from sound, lighting, documenting, hiring staff, food, and party rentals. We've got it covered",
+    icon: "mdi:ticket",
+  },
+
+  {
+    title: "Broadcast Production and Podcasting",
+    description:
+      "Expert streaming and podcasting services to captivate your audience, amplify your message, and elevate your brand's voice.",
+    icon: "mdi:podcast",
+  },
+  {
+    title: "Photography / Video",
+    description:
+      "Capturing your story through vibrant photography and dynamic videography, creating unforgettable visual experiences.",
+    icon: "mdi:camera-iris",
+  },
+  {
+    title: "Content / Print Production",
+    description:
+      "Delivering compelling digital and print creations for maximum brand impact, audience connection, and marketing success. Tailored social media content to spark conversations, inspire shares, and amplify your brand's message across platforms.",
+    icon: "mdi:television-shimmer",
+  },
+  {
+    title: "Indoor / Outdoor Displays",
+    description:
+      "Transforming spaces with cutting-edge digital signage, LED panels, and projections creating memorable visual experiences and impactful branding.",
+    icon: "mdi:view-dashboard-variant",
+  },
+  {
+    title: "Web Solutions",
+    description:
+      "Building impactful web experiences and robust e-commerce solutions to elevate your online presence and boost revenue.",
+    icon: "mdi:xml",
+  },
+];
+---
+
+<ContentSection title="Services" id="services">
+  <Fragment slot="lead">
+    Delivering <span class="text-primary">engaging</span> multimedia experiences, and <span class="text-primary">innovative</span> solutions to <span class="text-primary">captivate</span> your audience.
+ 
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      services.map(({ title, description, icon }) => (
+        <li class="border-default bg-offset flex flex-col items-center gap-4 border p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center text-xl font-extrabold">{title}</p>
+          <p class="text-offset text-center text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

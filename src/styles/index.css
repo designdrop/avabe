@@ -1,2 +1,7 @@
 @import "global.css";
 @import "theme.css";
+
+
+#intro h2{
+display: none;
+}

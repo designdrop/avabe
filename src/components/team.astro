@@ -1,20 +1,20 @@
 ---
 import ContentSection from "~/components/content-section.astro";
-import ShowcaseCard from "~/components/showcase-card.astro";
-import { getShowcase } from "~/data/showcase";
+import TeamCard from "~/components/team-card.astro";
+import { getTeam } from "~/data/team"
 
-const sites = await getShowcase();
+const team = await getTeam();
 ---
 
-<ContentSection title="Showcase" id="showcase">
+<ContentSection title="Team" id="team">
   <!-- <Fragment slot="lead">
     Astro is <span class="text-primary">versatile</span>.{" "}
     Explore</span> what's possible and get{" "}
     <span class="text-primary">inspired</span>.
   </Fragment> -->
   <div class="max-w-6xl space-y-2">
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
-      {sites.map((site) => <ShowcaseCard site={site} />)}
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      {team.map((person) => <TeamCard person={person} />)}
     </div>
   </div>
 </ContentSection>

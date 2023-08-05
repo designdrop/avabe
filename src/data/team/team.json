@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Jimmy",
+    "image": "./images/jimmy.jpeg",
+    "url": "@jimmy"
+  },
+  {
+    "name": "Johnny",
+    "image": "./images/johnny.jpeg",
+    "url": "@johnny"
+  },
+  {
+    "name": "Dave",
+    "image": "./images/dave.jpeg",
+    "url": "@dave"
+  },
+  {
+    "name": "Dwight",
+    "image": "./images/dwight.jpeg",
+    "url": "@dwight"
+  }
+]

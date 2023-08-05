@@ -4,9 +4,11 @@ import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
+  { title: "Services", url: "#services" },
   { title: "Showcase", url: "#showcase" },
+  { title: "Contact", url: "#contact" },
+  { title: "Team", url: "#team" },
+
 ];
 ---
 
@@ -17,7 +19,6 @@ const navItems: Array<NavItem> = [
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <h1 class="sr-only">Astro</h1>
     <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
   </a>
   <div>
     <div class="flex items-center gap-6">
