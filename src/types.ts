@@ -28,6 +28,8 @@ export interface ShowcaseSite {
 }
 export interface TeamMember {
   name: string;
+  title: string;
   image: ImageMetadata;
+  icon: string;
   url: string;
 }

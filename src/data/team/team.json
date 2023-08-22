@@ -1,22 +1,30 @@
 [
   {
     "name": "Jimmy",
-    "image": "./images/jimmy.jpeg",
+    "image": "./images/jimmy.jpg",
+    "title": "Production Director",
+    "icon": "fa-brands:instagram",
     "url": "@jimmy"
   },
   {
     "name": "Johnny",
-    "image": "./images/johnny.jpeg",
+    "image": "./images/johnny.jpg",
+    "icon": "mdi:web",
+    "title": "Experience Director",
     "url": "@johnny"
   },
   {
     "name": "Dave",
-    "image": "./images/dave.jpeg",
+    "image": "./images/dave.jpg",
+    "title": "Lighting Director",
+    "icon": "fa-brands:instagram",
     "url": "@dave"
   },
   {
     "name": "Dwight",
-    "image": "./images/dwight.jpeg",
+    "title": "Audio Director",
+    "image": "./images/dwight.jpg",
+    "icon": "mdi:link-variant",
     "url": "@dwight"
   }
 ]
