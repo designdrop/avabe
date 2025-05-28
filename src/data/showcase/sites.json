@@ -1,22 +1,22 @@
 [
   {
-    "title": "Live Production",
-    "image": "./images/polinations.png",
+    "title": "ATM Studios",
+    "image": "./images/vib01.jpg",
     "url": "https://polinations.com/"
   },
   {
-    "title": "Photography / Video",
-    "image": "./images/astro-docs.png",
+    "title": "Grand Performances",
+    "image": "./images/jamrock01.jpg",
     "url": "https://docs.astro.build/"
   },
   {
-    "title": "Web Services",
-    "image": "./images/divriots.png",
+    "title": "LA Check In",
+    "image": "./images/lacistudio.jpg",
     "url": "https://divriots.com/"
   },
   {
-    "title": "Content Creation",
-    "image": "./images/designcember.png",
+    "title": "Gene Brown Beatdown",
+    "image": "./images/gbbd.jpg",
     "url": "https://designcember.com/"
   }
 ]
