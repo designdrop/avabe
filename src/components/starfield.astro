@@ -118,9 +118,9 @@
     ctx.scale(dpr, dpr);
 
     for (const star of stars) {
-      star.x = Math.random() * width - width / 4;
-      star.y = Math.random() * height - height / 4;
-      star.z = 0;
+      star.x = Math.random() * width - width / 2;
+      star.y = Math.random() * height - height / 2;
+      star.z = Math.random();
     }
 
     ctx.translate(width / 2, height / 2);
