@@ -1,6 +1,6 @@
 ---
 import ContentSection from "~/components/content-section.astro";
-import ShowcaseCard from "~/components/showcase-card.astro";
+import ShowcaseProjectCard from "~/components/ShowcaseProjectCard.astro";
 import { getShowcase } from "~/data/showcase";
 
 const sites = await getShowcase();
@@ -14,7 +14,14 @@ const sites = await getShowcase();
   </Fragment> -->
   <div class="max-w-6xl space-y-2">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
-      {sites.map((site) => <ShowcaseCard site={site} />)}
+      {sites.map((site) => (
+        <ShowcaseProjectCard
+          title={site.title}
+          image={site.image}
+          role={site.role}
+          description={site.description}
+          url={site.url} />
+      ))}
     </div>
   </div>
 </ContentSection>

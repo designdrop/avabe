@@ -1,3 +1,5 @@
+import type { ImageMetadata } from 'astro'; // Add this import
+
 export interface ContactItem {
   icon: string;
   title: string;
@@ -24,6 +26,8 @@ export interface NavItem {
 export interface ShowcaseSite {
   title: string;
   image: ImageMetadata;
+  role: string;
+  description: string;
   url: string;
 }
 export interface TeamMember {

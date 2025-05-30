@@ -1,37 +1,33 @@
-// adapted from https://github.com/withastro/astro.build/blob/112bdc723b3ba305997c95d7ce02304624d0d3ce/src/data/showcase/index.ts
-
 import type { ShowcaseSite } from "~/types";
+import type { ImageMetadata } from "astro";
 import sitesData from "./sites.json";
 
-const allImages = import.meta.glob<ImageMetadata>("./images/*.{png,jpg,jpeg}", {
-  eager: true,
-  import: "default",
-});
-
-let _loadShowcase: Promise<Array<ShowcaseSite>>;
+const allImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../../assets/images/*.{png,jpg,jpeg}', { eager: true }
+);
 
 async function loadShowcase(): Promise<Array<ShowcaseSite>> {
-  const sites = await Promise.all(
-    sitesData.map(async (site) => {
-      if (!(site.image in allImages)) {
-        console.error(
-          `Image for "${site.title}" not found (provided: "${site.image}")`
-        );
-      }
-
-      const image = await allImages[site.image];
-
-      return {
-        ...site,
-        image,
-      };
-    })
-  );
-
-  return sites;
+  return sitesData.map((site) => {
+    const imagePath = `../../assets/images/${site.image}`;
+    const image = allImages[imagePath]?.default; // <-- THIS IS CORRECT!
+    if (!image) {
+      console.error(
+        `Image for "${site.title}" not found (provided: "${site.image}")`
+      );
+    }
+    return {
+      ...site,
+      image, // This will be undefined if not found
+    };
+  });
 }
+
+let _loadShowcase: Promise<Array<ShowcaseSite>>;
 
 export async function getShowcase() {
   _loadShowcase = _loadShowcase || loadShowcase();
   return _loadShowcase;
 }
+
+console.log("allImages keys:", Object.keys(allImages));
+console.log("site images:", sitesData.map(site => `../../assets/images/${site.image}`));
